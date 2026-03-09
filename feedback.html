@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Feedback zu meiner Website" />
+    <meta name="author" content="Anastasiia Zvarych" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback</title>
+  </head>
+  <body>
+    <header>
+      <h1>Feedback</h1>
+      <h3>Hauptnavigation</h3>
+      <nav>
+        <ul>
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="rezepte.html">Rezepte</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <article>
+          <h2>Feedback zu meiner Website</h2>
+
+          <form
+            action="https://gibm.becknet.ch/formular/formular.php"
+            method="post"
+          >
+            <fieldset>
+              <legend>Persönliche Daten</legend>
+              <div>
+                <label>Anrede *</label><br />
+                <input
+                  type="radio"
+                  name="anrede"
+                  id="frau"
+                  value="Frau"
+                  required
+                />
+                <label for="frau">Frau</label>
+                <input type="radio" name="anrede" id="herr" value="Herr" />
+                <label for="herr">Herr</label>
+                <input
+                  type="radio"
+                  name="anrede"
+                  id="anderes"
+                  value="Anderes"
+                />
+                <label for="anderes">Anderes</label>
+              </div>
+              <div>
+                <label for="vorname">Vorname *</label><br />
+                <input
+                  type="text"
+                  id="vorname"
+                  name="vorname"
+                  minlength="2"
+                  maxlength="45"
+                  placeholder="Anna"
+                  required
+                />
+              </div>
+
+              <div>
+                <label for="nachname">Nachname *</label><br />
+                <input
+                  type="text"
+                  id="nachname"
+                  name="nachname"
+                  minlength="2"
+                  maxlength="55"
+                  placeholder="Odermatt"
+                  required
+                />
+              </div>
+              <div>
+                <label for="email">Email *</label><br />
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  minlength="5"
+                  maxlength="345"
+                  placeholder="anna.odermatt@gmail.com"
+                  required
+                />
+              </div>
+              <div>
+                <label for="tel">Telefonnummer</label><br />
+                <input
+                  type="tel"
+                  id="tel"
+                  name="telefon"
+                  pattern="[0-9]{10}"
+                  placeholder="0791234567"
+                  required
+                />
+              </div>
+              <div>
+                <label for="geburt">Geburtsdatum</label><br />
+                <input type="date" id="geburt" name="geburt" required />
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Kocherfahrung</legend>
+              <div>
+                <label for="gerichte">Lieblingsküche</label>
+                <select name="kueche" id="gerichte">
+                  <option value="ukrainisch">Ukrainisch</option>
+                  <option value="italienisch">Italienisch</option>
+                  <option value="asiatisch">Asiatisch</option>
+                  <option value="dessert">Einfach Dessers</option>
+                </select>
+              </div>
+              <div>
+                <p>Welche Rezepte gefallen dir?</p>
+                <input type="checkbox" name="rezepte" value="warenyky" />
+                Warenyky<br />
+                <input type="checkbox" name="rezepte" value="torte" />
+                Schokotorte<br />
+                <input type="checkbox" name="rezepte" value="cheesecake" />
+                Cheesecake<br />
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Feedback</legend>
+
+              <label for="bewertung">Bewertung (1-10)</label><br />
+              <input
+                type="number"
+                id="bewertung"
+                name="bewertung"
+                min="1"
+                max="10"
+              /><br /><br />
+
+              <p>Ist deine Website besser? Lass mich sehen!</p>
+              <label for="website">Deine Website</label><br />
+              <input
+                type="url"
+                id="website"
+                name="website"
+                placeholder="https://example.com"
+              /><br /><br />
+
+              <label for="nachricht">Nachricht</label><br />
+              <textarea
+                id="nachricht"
+                name="nachricht"
+                rows="5"
+                cols="30"
+              ></textarea>
+              <div>
+                <input type="submit" value="Senden" />
+                <input type="reset" value="Zurücksetzen" />
+              </div>
+            </fieldset>
+          </form>
+        </article>
+      </section>
+    </main>
+    <hr />
+    <footer>
+      <p>&copy; 2026 Anastasiia Zvarych</p>
+    </footer>
+  </body>
+</html>
