@@ -5,24 +5,28 @@
     <meta name="description" content="Feedback zu meiner Website" />
     <meta name="author" content="Anastasiia Zvarych" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Feedback</title>
   </head>
   <body>
     <header>
-      <h1>Feedback</h1>
-      <h3>Hauptnavigation</h3>
       <nav>
         <ul>
-          <li><a href="index.html">Startseite</a></li>
-          <li><a href="rezepte.html">Rezepte</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
-          <li><a href="feedback.html">Feedback</a></li>
+          <li>
+            <a href="uebermich.html" id="top">Über mich</a>
+          </li>
+          <div id="top-left">
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="rezepte.html">Hobby</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="kontakt.html" id="kontakt">Kontakt</a></li>
+          </div>
         </ul>
       </nav>
     </header>
-    <main>
+    <main id="main-feedback">
       <section>
-        <article>
+        <article id="feedback">
           <h2>Feedback zu meiner Website</h2>
 
           <form
@@ -113,7 +117,7 @@
                   <option value="ukrainisch">Ukrainisch</option>
                   <option value="italienisch">Italienisch</option>
                   <option value="asiatisch">Asiatisch</option>
-                  <option value="dessert">Einfach Dessers</option>
+                  <option value="dessert">Einfach Desserts</option>
                 </select>
               </div>
               <div>
@@ -164,7 +168,6 @@
         </article>
       </section>
     </main>
-    <hr />
     <footer>
       <p>&copy; 2026 Anastasiia Zvarych</p>
     </footer>

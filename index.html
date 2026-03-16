@@ -8,122 +8,46 @@
     />
     <meta name="author" content="Anastasiia Zvarych" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Meine persönliche Webseite</title>
   </head>
-  
+
   <body>
     <header>
-      <h1>Portfolio</h1>
-        <h3>Hauptnavigation</h3>
-        <nav>
-      <ul>
-        <li><a href="index.html">Startseite</a></li>
-        <li><a href="rezepte.html">Rezepte</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-        <li><a href="feedback.html">Feedback</a></li>
-      </ul>
-    </nav>
+      <nav>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <ul>
+          <li>
+            <a href="uebermich.html" id="top"><u>Über mich</u></a>
+          </li>
+          <div id="top-left">
+            <li><a href="rezepte.html">Hobby</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="kontakt.html" id="kontakt">Kontakt</a></li>
+          </div>
+        </ul>
+      </nav>
     </header>
 
-    <h3>Inhaltsnavigation</h3>
-    <nav>
-      <ul>
-        <li><a href="#personalien">Personalien</a></li>
-        <li><a href="#schulen">Schulen</a></li>
-        <li><a href="#hobbys">Hobbys</a></li>
-      </ul>
-    </nav>
-
     <main>
-      <hr />
-      <section id="personalien">
-        <article>
-          <h2>Personalien</h2>
-          <p>
-            <strong>Name:</strong> Anastasiia Zvarych<br />
-            <strong>Geburtsdatum:</strong> 16.07.2008<br />
-            <strong>Wohnort:</strong> Ramlingsburg
-          </p>
-          <img
-            src="https://img.freepik.com/vektoren-kostenlos/symbol-mann-mit-erhobener-hand_24877-81630.jpg?semt=ais_hybrid&w=740&q=80"
-            alt="Ein Bild eines Menschens (da ich faul war mein eingenes hochzuladen)"
-            width="300px"
-          />
-
-          <p>
-            Hallo ich bin Anastasiia oder kurz Nastia und im Moment mache ich
-            eine Lehre als Informatikerin im bereich Applikationsentwicklung.
-            Ich bin <em>interessiert an Informatik</em> und lerne gerne neue
-            Technologien.
-          </p>
-          <p>
-            <a href="Lebenslauf_Anastasiia.pdf" target="_blank">Hier</a> finden
-            Sie mein Lebenslauf.
-          </p>
-        </article>
-      </section>
-      <hr />
-      <section id="schulen">
-        <article>
-          <h2>Besuchte Schulen</h2>
-          <ol>
-            <li>
-              <a href="https://school1.cn.ua/" target="_blank">Primarschule 1</a> in Chernihiv
-            </li>
-            <li>
-              <a href="https://start.sekliestal.ch/" target="_blank">Frenke Sekundarschule</a>
-              in Liestal
-            </li>
-            <li>
-              <a href="https://www.bbzbl.ch/" target="_blank">Berufsschule</a> in Pratteln
-            </li>
-          </ol>
-
-          <table border="1">
-            <tr>
-              <th>Schule</th>
-              <th>Jahre</th>
-            </tr>
-            <tr>
-              <td>Primarschule</td>
-              <td>2015 – 2021</td>
-            </tr>
-            <tr>
-              <td>Sekundarschule</td>
-              <td>2021 – 2025</td>
-            </tr>
-          </table>
-        </article>
-      </section>
-      <hr />
-      <section id="hobbys">
-        <article>
-          <h2>Hobbys</h2>
-          <ul>
-            <li>Programmieren</li>
-            <li>Laufen</li>
-            <li>Sport</li>
-            <li>Kochen</li>
-          </ul>
-          <p>
-            <a href="rezepte.html">Hier</a> ist eine Link zu Seite mit meine
-            Rezepte.
-          </p>
-        </article>
-      </section>
-
-
-
-
-
-      <aside>
+      <div id="index-text">
+        <div id="text-top">
+          <p id="hello">Hello, <b>I'm Nastia</b></p>
+          <p>Informatikerin in Applikationsentwicklung EFZ</p>
+          <hr />
+        </div>
         <p>
-          <strong>Fun Fact:</strong><br />
-          Habe mein ganzes Leben Katzen gehabt.
+          Ich bin Lernende Informatikerin im Bereich Applikationsentwicklung und
+          interessiere mich besonders für Webentwicklung und neue Technologien.
+          Auf dieser Website findest du Informationen über mich, meine Projekte
+          und einige meiner Lieblingsrezepte.
         </p>
-      </aside>
+      </div>
+      <div id="index-photo">
+        <img src="portfolio-bild.png" alt="Portfolio Bild" width="650px" />
+      </div>
     </main>
-    <hr />
     <footer>
       <p>&copy; 2026 Anastasiia Zvarych</p>
     </footer>

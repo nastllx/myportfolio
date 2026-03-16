@@ -1,0 +1,274 @@
+@import url(https://db.onlinewebfonts.com/c/db2fed7a287108850fe40ff42adb7c5a?family=ITC+Franklin+Gothic+LT+W01MdCn);
+
+body {
+    font-family: "ITC Franklin Gothic LT W01MdCn", sans-serif;
+    margin: 0;
+    padding: 0px;
+    background-color: #8d99ae;
+    display: grid;
+    grid-template-columns: 13% 29% 29% 29%;
+    grid-template-rows: 90px auto 100px;
+    grid-template-areas:
+       "header header header header"
+       "navigation content content content"
+       "footer footer footer footer";
+}
+header {
+    grid-area: header;
+    background-color: #727f96;
+}
+header nav ul{
+    padding: 10px;
+    display: flex;
+    font-size: 23px;
+    padding-bottom: 0px;
+    justify-content: space-between;
+    list-style-type: none;
+    gap: 20px;
+   
+}
+#menu-toggle {
+    display: none;
+}
+#top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hamburger {
+  display: none;         
+  font-size: 38px;
+  cursor: pointer;
+  position: absolute;
+    top: 1%;
+  right: 20px; 
+  padding-top: 15px;          
+  
+  z-index: 100;      
+}
+#nav-left {
+  list-style: none;
+    display: flex;
+    margin: 0px 0px 0px 20px;
+    padding: 0px;
+    position: relative;
+}
+#nav-right {
+  list-style: none;
+    display: flex;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+header li {
+    list-style: none;
+    margin-right: 20px;
+    margin-bottom: 0px;
+    
+}
+
+  header li > a {
+    text-decoration: none;
+    color: #edf0f2;
+    padding: 8px 30px;
+}
+#kontakt {
+    background-color: #d90429;
+    border-radius: 20px;
+    
+}
+
+body a {
+    color: #2b2d42;
+}
+/*main----------------------------------------------------------------------------*/
+main {
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px 0px 20px;
+    height: auto;
+    grid-area: content;
+}
+h1 {
+    font-size: 50px;
+    margin: 30px 0px 50px 30px;
+}
+#side-nav {
+    grid-area: navigation;
+    padding-left: 20px;
+    background-color: #e7ecee;
+    
+}
+#side-nav li{
+    margin-bottom: 5px;
+
+}
+section {
+    margin: 0px 5px 35px 5px;
+}
+
+/*hobby----------------------------------------------------------------------------*/
+#seite-start {
+    display: flex;
+}
+.rezepte-start p {
+    margin: 80px 10px 10px 5px;
+    font-size: 20px;
+    color: #2b2d42;
+}
+#seite-start hr {
+    border: 1px solid #2b2d42;
+}
+#rezept {
+    background-color: #2b2d42;
+    padding: 20px;
+    border-radius: 40px;
+    max-width: 40%;
+}
+#rezept h3, li, h4, p {
+    color: #edf2f4;
+}
+#rezept img {
+    border-radius: 20px;
+    display: block;
+    margin: 5px auto;
+}
+#desserts-box {
+    display: flex;  
+    gap: 100px;
+    justify-content: center;
+}
+#desserts h2, #herzhafte h2 {
+    font-size: 30px;
+    color: #2b2d42;
+   
+}
+#rezepte-h2 {
+    display: flex;
+    align-items: center;
+    
+}
+#rezepte-h2 hr {
+    flex-grow: 1;
+    border: 1px solid #e7ecee;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+/*feedback----------------------------------------------------------------------------*/
+main#main-feedback, main#main-kontakt {
+    justify-content: center; 
+    grid-area: 2 / 1 / 3 / 5;   
+}
+#feedback {
+    background-color: #2b2d42;
+    color: #edf2f4;
+    padding: 20px;
+    border-radius: 40px;
+    max-width: 60%;
+    margin: 50px auto;
+    min-width: 350px;
+    justify-content: center;
+}
+
+/*kontakt----------------------------------------------------------------------------*/
+.kontakt-start p {
+    font-size: 20px;
+    color: #2b2d42;
+    
+}
+#kontakt-p-hr {
+    margin: 25px 5px 10px 10px;
+}
+.kontakt-start {
+    gap: 20px;
+}
+#main-kontakt p {
+     color: #2b2d42;
+}
+
+
+/*footer----------------------------------------------------------------------------*/
+footer {
+    margin: 0px;
+    background-color: #edf2f4;
+    color: #2b2d42;
+    text-align: center;
+    padding: 20px;
+    height: 150px;
+    grid-area: footer;
+}
+footer p {
+    color: #2b2d42;
+}
+header a:hover {
+    background-color: #8a0219 !important;
+    border-radius: 20px;
+}
+
+/*meadi----------------------------------------------------------------------------*/
+@media (max-width: 1080px) {
+    body {
+        grid-template-columns: 100%;
+        grid-template-rows: 90px auto 100px;
+        grid-template-areas:
+           "header"
+           "content"
+           "footer";
+    }
+    #side-nav {
+        display: none;
+    }
+    main {
+        justify-content: center;
+    }
+    #top {
+        max-width: 90%;
+        text-align: center;
+    }
+    #top-left {
+        max-width: 30%;
+        display: flex;
+    }
+}
+@media (max-width: 890px) {
+    .hamburger {
+    display: block; 
+    z-index: 101;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #727f96;
+    padding: 0px;
+    z-index: 100;
+  }
+
+  #menu-toggle:checked + .hamburger + .nav-links {
+    display: flex;
+  }
+  #nav-left, #nav-right {
+    flex-direction: column;
+    align-items: left !important;
+    width: 100%;
+    gap: 20px;
+    margin: 0px 0px 0px 20px;
+    justify-content: left !important;
+  }
+  #nav-left {
+    padding-bottom: 5px;
+  }
+  #kontakt {
+    background-color: #727f96;
+  }
+}
