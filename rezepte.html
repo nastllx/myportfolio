@@ -8,24 +8,28 @@
     />
     <meta name="author" content="Anastasiia Zvarych" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Meine Rezepte</title>
   </head>
 
   <body>
     <header>
-      <nav>
-        <ul>
-          <li>
-            <a href="uebermich.html" id="top">Über mich</a>
-          </li>
-          <div id="top-left">
+      <nav id="top-nav">
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="hamburger">☰</label>
+        <div class="nav-links">
+          <ul id="nav-left">
+            <li>
+              <a href="uebermich.html">Über mich</a>
+            </li>
+          </ul>
+          <ul id="nav-right">
             <li><a href="index.html">Startseite</a></li>
             <li><a href="rezepte.html">Hobby</a></li>
             <li><a href="feedback.html">Feedback</a></li>
             <li><a href="kontakt.html" id="kontakt">Kontakt</a></li>
-          </div>
-        </ul>
+          </ul>
+        </div>
       </nav>
     </header>
     <nav id="side-nav">
@@ -47,109 +51,140 @@
           <hr />
         </div>
       </div>
-
-      <section id="herzhafte">
-        <div id="rezepte-h2">
-          <h2>Herzhafte Rezepte</h2>
-          <hr />
-        </div>
-        <article id="rezept">
-          <h3>Warenyky mit Kartoffelfüllung</h3>
-          <img
-            src="Screenshot 2026-02-06 201504.png"
-            alt="Warenyky mit Kartoffelfüllung"
-            width="400px"
-          />
-          <h4>Zutaten für den Teig:</h4>
-          <ul>
-            <li>500 g Weizenmehl</li>
-            <li>250 ml lauwarmes Wasser</li>
-            <li>1 Ei (optional, geht auch ohne)</li>
-            <li>1 TL Salz</li>
-            <li>2 EL Öl</li>
-          </ul>
-          <h4>Zutaten für die Füllung:</h4>
-          <ul>
-            <li>600 g Kartoffeln</li>
-            <li>1 kleine Zwiebel</li>
-            <li>Salz & Pfeffer</li>
-            <li>etwas Butter</li>
-            <li></li>
-          </ul>
-          <h3>Optionales Topping:</h3>
-          <ul>
-            <li>200 g Champignons</li>
-            <li>1 kleine Zwiebel</li>
-            <li>Öl oder Butter zum Braten</li>
-            <li>Saure Sahne</li>
-          </ul>
-        </article>
-      </section>
-
-      
-      <section id="desserts">
-        <div id="rezepte-h2">
-          <h2>Desserts</h2>
-          <hr />
-        </div>
-        <div id="desserts-box">
+      <div id="rezepte-box">
+        <section id="herzhafte">
+          <div id="rezepte-h2">
+            <h2>Herzhafte Rezepte</h2>
+            <hr />
+          </div>
           <article id="rezept">
-            <h3>Shoko-Torto mit Erdbeerfühlung</h3>
+            <h3>Warenyky mit Kartoffelfüllung</h3>
             <img
-              src="Screenshot 2026-02-06 201520.png"
-              alt="Ein Stück von Shoko-Torto mit Erdbeerfühlung"
+              src="files/Vareniky.jpg"
+              alt="Warenyky mit Kartoffelfüllung"
               width="400px"
             />
-            <h4>Zutaten für den Schoko-Tortenboden:</h4>
+            <h4>Zutaten für den Teig:</h4>
             <ul>
-              <li>4 Eier</li>
-              <li>120 g Zucker</li>
-              <li>100 g Mehl</li>
-              <li>30 g Kakaopulver</li>
-              <li>1 TL Backpulver</li>
-              <li>1 Prise Salz</li>
+              <li>500 g Weizenmehl</li>
+              <li>250 ml lauwarmes Wasser</li>
+              <li>1 Ei (optional, geht auch ohne)</li>
+              <li>1 TL Salz</li>
+              <li>2 EL Öl</li>
             </ul>
-            <h4>Zutaten für die Creme:</h4>
+            <h4>Zutaten für die Füllung:</h4>
             <ul>
-              <li>250 g Mascarpone</li>
-              <li>200 ml Schlagsahne</li>
-              <li>100 g Zartbitterschokolade</li>
-              <li>2–3 EL Puderzucker</li>
+              <li>600 g Kartoffeln</li>
+              <li>1 kleine Zwiebel</li>
+              <li>Salz & Pfeffer</li>
+              <li>etwas Butter</li>
+              <li></li>
             </ul>
-            <h4>Zutaten für das Erdbeerkompott:</h4>
+            <h3>Optionales Topping:</h3>
             <ul>
-              <li>300 g gefrorene Erdbeeren</li>
-              <li>2–3 EL Zucker</li>
-              <li>1 TL Zitronensaft</li>
-              <li>1 TL Speisestärke (optional, für mehr Dicke)</li>
-            </ul>
-          </article>
-          
-          <article id="rezept">
-            <h3>Schoko-Cheesecake</h3>
-            <p><i>San-Sebastian-Style, mit Quark</i></p>
-            <img
-              src="Screenshot 2026-02-06 201537.png"
-              alt="Schoko-Cheesecake"
-              width="400px"
-            />
-
-            <h4>Zutaten:</h4>
-            <ul>
-              <li>600 g Quark (40 %)</li>
-              <li>200 g Frischkäse</li>
-              <li>200 ml Sahne</li>
-              <li>150 g Zucker</li>
-              <li>3 Eier</li>
-              <li>200 g Zartbitterschokolade</li>
-              <li>1 EL Kakaopulver</li>
-              <li>1 TL Vanillezucker</li>
-              <li>1 Prise Salz</li>
+              <li>200 g Champignons</li>
+              <li>1 kleine Zwiebel</li>
+              <li>Öl oder Butter zum Braten</li>
+              <li>Saure Sahne</li>
             </ul>
           </article>
-        </div>
-      </section>
+        </section>
 
+        <section id="desserts">
+          <div id="rezepte-h2">
+            <h2>Desserts</h2>
+            <hr />
+          </div>
+          <div id="desserts-box">
+            <article id="rezept">
+              <h3>Shoko-Torto mit Erdbeerfühlung</h3>
+              <img
+                src="files/Shokotorte.jpg"
+                alt="Ein Stück von Shoko-Torto mit Erdbeerfühlung"
+                width="400px"
+              />
+              <h4>Zutaten für den Schoko-Tortenboden:</h4>
+              <ul>
+                <li>4 Eier</li>
+                <li>120 g Zucker</li>
+                <li>100 g Mehl</li>
+                <li>30 g Kakaopulver</li>
+                <li>1 TL Backpulver</li>
+                <li>1 Prise Salz</li>
+              </ul>
+              <h4>Zutaten für die Creme:</h4>
+              <ul>
+                <li>250 g Mascarpone</li>
+                <li>200 ml Schlagsahne</li>
+                <li>100 g Zartbitterschokolade</li>
+                <li>2–3 EL Puderzucker</li>
+              </ul>
+              <h4>Zutaten für das Erdbeerkompott:</h4>
+              <ul>
+                <li>300 g gefrorene Erdbeeren</li>
+                <li>2–3 EL Zucker</li>
+                <li>1 TL Zitronensaft</li>
+                <li>1 TL Speisestärke (optional, für mehr Dicke)</li>
+              </ul>
+            </article>
+
+            <article id="rezept">
+              <h3>Schoko-Cheesecake</h3>
+              <p><i>San-Sebastian-Style, mit Quark</i></p>
+              <img
+                src="files/Cheesecake.jpg"
+                alt="Schoko-Cheesecake"
+                width="400px"
+              />
+
+              <h4>Zutaten:</h4>
+              <ul>
+                <li>600 g Quark (40 %)</li>
+                <li>200 g Frischkäse</li>
+                <li>200 ml Sahne</li>
+                <li>150 g Zucker</li>
+                <li>3 Eier</li>
+                <li>200 g Zartbitterschokolade</li>
+                <li>1 EL Kakaopulver</li>
+                <li>1 TL Vanillezucker</li>
+                <li>1 Prise Salz</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+        <section id="video">
+          <article>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/EaljSnLrJW8?si=-qzN0Ix8IwFtR7AI"
+              title="YouTube video player"
+              frameborder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+              "
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </article>
+          <article>
+            <audio controls id="audio">
+              <source
+                src="files/Hazelwood - At Ease (freetouse.com).mp3"
+                type="audio/mpeg"
+              />
+              <source src="files/Hazelwood - At Ease (freetouse.com).webm" />
+              Your browser does not support the audio element.
+            </audio>
+          </article>
+        </section>
+      </div>
       <aside>
         <p><b>Tipp:</b> Alle Rezepte sind selbst ausprobiert</p>
       </aside>
