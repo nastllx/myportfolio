@@ -86,7 +86,9 @@ header {
   width: 100%;
   align-items: center;
 }
-
+.used {
+    text-decoration: underline;
+}
 #kontakt {
   background-color: var(--accent-color);
   border-radius: 20px;
