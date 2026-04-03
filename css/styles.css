@@ -9,6 +9,9 @@
   --nav-color: #e7ecee;
   --light-color: #edf2f4;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "ITC Franklin Gothic LT W01MdCn", sans-serif;
   margin: 0;
@@ -24,6 +27,7 @@ body {
   a {
     color: var(--dark-color);
   }
+  
 }
 header {
   grid-area: header;
@@ -138,7 +142,7 @@ section {
   background-color: var(--dark-color);
   padding: 20px;
   border-radius: 40px;
-  max-width: 40%;
+  max-width: 400px;
   min-width: 300px;
 }
 #rezept h3,
@@ -196,7 +200,7 @@ main#main-kontakt {
   border-radius: 40px;
   max-width: 60%;
   margin: 50px auto;
-  min-width: 350px;
+  min-width: 300px;
   justify-content: center;
 }
 
@@ -205,7 +209,7 @@ main#main-kontakt {
   font-size: 20px;
   color: var(--dark-color);
 }
-#kontakt-p-hr {
+.kontakt-start div {
   margin: 25px 5px 10px 10px;
 }
 .kontakt-start {
@@ -267,16 +271,21 @@ header a:hover {
   
 }
 @media (max-width: 930px) {
-  .rezepte-start {
+  .rezepte-start,
+  .kontakt-start {
     display: block;
     flex-direction: column;
+    p {
+      margin: 5px 0px 10px 20px;
+    }
+    h1 {
+      margin-bottom: 5px;
+    }
+    div {
+      margin: 0px;
+    }
   }
-  .rezepte-start p {
-    margin-top: 5px;
-  }
-  .rezepte-start h1 {
-    margin-bottom: 10px;
-  }
+  
 }
 @media (max-width: 890px) {
   .hamburger {
@@ -318,10 +327,50 @@ header a:hover {
     flex-direction: column;
     gap: 50px;
   }
+  main iframe {
+    width: 100%;
+    
+  }
 }
 @media (max-width: 600px) {
   #video iframe {
     width: 100%;
     height: auto;
   }
+  #main-feedback {
+    padding-left: 5px;
+  }
 }
+@media (max-width: 500px) {
+  main iframe {
+    width: 300px;
+    height: 300PX;
+  }
+  }
+@media (max-width: 500px) {
+  .kontakt-start {
+    h1 {
+      font-size: 40px;
+      margin-left: 10px;
+    }
+     p {
+      font-size: 16px;
+     }
+    }
+  }
+  @media (max-width: 400px) {
+  .kontakt-start {
+    h1 {
+      font-size: 30px;
+      
+    }
+    }
+    main iframe {
+    width: 250px;
+    height: 250PX;
+  }
+  #rezept {
+  min-width: 250px;
+  
+}
+  }
