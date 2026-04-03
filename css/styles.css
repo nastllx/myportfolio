@@ -15,12 +15,12 @@ body {
   padding: 0px;
   background-color: var(--background-color);
   display: grid;
-  grid-template-columns: 13% 29% 29% 29%;
+  grid-template-columns: 13% 87%;
   grid-template-rows: 90px auto 100px;
   grid-template-areas:
-    "header header header header"
-    "navigation content content content"
-    "footer footer footer footer";
+    "header header"
+    "navigation content"
+    "footer footer";
   a {
     color: var(--dark-color);
   }
@@ -235,10 +235,17 @@ header a:hover {
 }
 
 /*meadi----------------------------------------------------------------------------*/
+@media (max-width: 1200px){
+  img {
+    max-width: 100%;
+    height: auto;
+    min-width: 200px;
+  }
+}
 @media (max-width: 1080px) {
   body {
     grid-template-columns: 100%;
-    grid-template-rows: 90px auto  auto 100px;
+    grid-template-rows: 90px auto auto 100px;
     grid-template-areas:
       "header"
       "navigation"
@@ -257,11 +264,7 @@ header a:hover {
     max-width: 30%;
     display: flex;
   }
-  img {
-    max-width: 100%;
-    height: auto;
-    min-width: 200px;
-  }
+  
 }
 @media (max-width: 930px) {
   .rezepte-start {

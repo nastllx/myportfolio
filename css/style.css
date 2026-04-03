@@ -9,18 +9,24 @@
   --nav-color: #e7ecee;
   --light-color: #edf2f4;
 }
+main {
+  overflow-y: hidden;
+  position: relative;
+}
 body {
   font-family: "ITC Franklin Gothic LT W01MdCn", sans-serif;
   margin: 0;
   padding: 0px;
   background-color: var(--background-color);
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  overflow-x: hidden;
+  
+  grid-template-columns: 100%;
   grid-template-rows: 90px auto 100px;
   grid-template-areas:
-    "header header header header"
-    "content content content content"
-    "footer footer footer footer";
+    "header"
+    "content"
+    "footer";
 }
 main {
   display: flex;
@@ -29,7 +35,7 @@ main {
   padding: 0px 20px 0px 20px;
   height: auto;
   grid-area: content;
-  max-height: 680px;
+  max-height: 650px;
 }
 header {
   grid-area: header;
@@ -63,6 +69,7 @@ header nav ul {
 
   z-index: 100;
 }
+/* Navigation---------------------------------------------------------------------------- */
 #nav-left {
   list-style: none;
   display: flex;
@@ -100,21 +107,11 @@ header li > a {
   background-color: var(--accent-color);
   border-radius: 20px;
 }
-#top {
-  max-width: 70%;
-  text-align: left;
-  padding-left: 30px;
-}
-#top-left {
-  max-width: 30%;
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 10px;
-  gap: 15px;
-}
+/* Text---------------------------------------------------------------------------- */
 #hello {
   font-size: 80px;
   margin: 0px;
+  padding-bottom: 0px;
 }
 #index-text {
   max-width: 50%;
@@ -127,8 +124,11 @@ header li > a {
   margin: 0px;
 }
 #text-top {
-  margin-bottom: 40px;
+  
   font-size: 30px;
+}
+.text-top-under {
+margin-bottom: 40px;
 }
 #text-top hr {
   width: 400px;
@@ -138,6 +138,13 @@ header li > a {
   margin-right: 0px;
   margin-top: 2px;
 }
+#mobile-hr {
+  display: none;
+  width: 200px;
+  border: 2px solid var(--accent-color);
+  margin: 20px auto;
+}
+/* Foto---------------------------------------------------------------------------- */
 #index-photo {
   max-width: 50%;
   display: flex;
@@ -149,18 +156,18 @@ header li > a {
   position: absolute;
   width: 650px;
   height: 650px;
-  background-color: var(--dark-color); /* Farbe vom Punkt */
+  background-color: var(--dark-color);
   border-radius: 50%; /* macht Kreis */
   right: 5px;
-  top: 300px;
+  top: 200px;
   z-index: -1; /* hinter dem Bild */
 }
+/* Footer---------------------------------------------------------------------------- */
 footer {
   margin: 0px;
   background-color: var(--light-color);
   text-align: center;
   padding: 20px;
-  height: 150px;
   grid-area: footer;
 }
 footer p {
@@ -186,41 +193,44 @@ header a:hover {
   }
   #text-top hr {
     margin: 0 0 10px 0;
+    width: 350px;
   }
-  #index-photo {
-    justify-content: flex-end; /* Bild bleibt rechts */
-    width: 40%;
-  }
+ 
 }
 @media (max-width: 890px) {
   #text-top {
     margin-bottom: 20px;
     font-size: 25px;
   }
+  #hello {
+    font-size: 60px;
+  }
+  #index-p{
+    font-size: 18px;
+  }
   #text-top hr {
     width: 200px;
     margin-top: 10px;
   }
-  #index-photo {
-    max-width: 100%;
-    display: flex;
-    justify-content: center;
+
+  #index-photo::before {
+    width: 550px;
+    height: 550px;
+    top: 230px;
+  }
+  #index-photo img{
+    margin-left: 150px;
+  }
+  main {
     padding-right: 0px;
   }
-  #index-photo::before {
-    width: 400px;
-    height: 400px;
-    right: auto;
-    left: auto;
-    top: 350px;
-  }
-}
-@media (max-width: 890px) {
+
+  /* Hamburger Menu---------------------------------------------------------------------------- */
+
   .hamburger {
     display: block;
     z-index: 101;
   }
-
   .nav-links {
     display: none;
     flex-direction: column;
@@ -232,7 +242,6 @@ header a:hover {
     padding: 0px;
     z-index: 100;
   }
-
   #menu-toggle:checked + .hamburger + .nav-links {
     display: flex;
   }
@@ -252,3 +261,212 @@ header a:hover {
     background-color: var(--grey-color);
   }
 }
+
+@media (max-width: 850px) {
+  #index-photo {
+    padding-right: 0px;
+  }
+  #index-photo::before {
+    width: 470px;
+    height: 470px;
+    top: 300px;
+    right: 30px;
+  }
+  #index-photo img{
+    margin: 65px 0px 0px 150px;
+    width: 600px;
+  }
+}
+@media (max-width: 750px) {
+  #index-photo::before {
+    width: 450px;
+    height: 450px;
+    top: 300px;
+    right: 5px;
+  }
+  #index-photo img{
+    margin: 75px -40px 0px 200px;
+    
+    width: 550px;
+  }
+}
+@media (max-width: 650px) {
+  #index-photo::before {
+    width: 400px;
+    height: 400px;
+    top: 300px;
+    right: 5px;
+  }
+  #index-photo img{
+    margin: 75px -40px 0px 200px;
+    
+    width: 500px;
+  }
+}
+@media (max-width: 600px){
+  main {
+    display: flex;
+    flex-direction: column;
+    max-height: none; /* Verhindert, dass der Inhalt abgeschnitten wird */
+    overflow-x: hidden;
+    
+  }
+body{
+  grid-template-rows: 100px auto 100px;
+}
+  /* Der Zaubertrick: Löst den Container für das Flex-Layout auf */
+  #index-text {
+    display: contents; 
+  }
+
+  /* 1. Hello Nastia */
+  .hello {
+    order: 1;
+    width: 100%;
+    
+  }
+  #hello{
+    font-size: 95px;
+  }
+
+  /* 2. Das Foto */
+  #index-photo {
+    order: 2;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  #index-photo img {
+    width: 500px; /* Bildgröße auf Handy anpassen */
+    height: auto;
+    margin: 0;
+    position: relative;
+    margin-top: -260px;
+    margin-right: -30px;
+
+  }
+
+  #index-photo::before {
+    width: 370px; 
+    height: 370px;
+    top: 185px;
+    right: 70px;
+  }
+
+  /* 3. Die rote Linie */
+  #mobile-hr {
+    display: block;
+    order: 3;
+    width: 80%;
+    border: 2px solid var(--accent-color);
+    margin: 0;
+    margin-left: 35px;
+   
+  }
+
+  /* 4. Informatikerin... (Klasse korrigiert) */
+  .text-top-under {
+    order: 4;
+    width: 100%;
+    text-align: right !important;
+    font-size: 18px;
+    color: var(--light-color);
+    
+    p {
+      margin-right: 20px !important;
+    }
+  }
+  
+  /* Alte HR innerhalb des Textes verstecken */
+  .text-top-under hr {
+    display: none;
+  }
+
+  /* 5. Der restliche Text */
+  #index-p {
+    order: 5;
+    width: 100%;
+    text-align: right;
+    font-size: 18px;
+    margin: 0px 20px 20px 10px !important;
+  }
+  
+  
+}
+
+@media (max-width: 540px){
+  #index-photo img {
+    width: 470px; 
+    margin-top: -245px;
+    margin-right: -40px;
+
+  }
+  #hello{
+    font-size: 90px;
+  }
+  #index-photo::before {
+    width: 350px; 
+    height: 350px;
+    top: 175px;
+    right: 60px;
+  }
+}
+
+@media (max-width: 500px){
+  #hello{
+    font-size: 80px;
+  }
+
+  #index-photo img {
+    width: 400px;
+    margin-top: -170px;
+
+  }
+
+  #index-photo::before {
+    width: 310px; 
+    height: 310px;
+    top: 190px;
+    right: 55px;
+  }
+}
+@media (max-width: 420px){
+  #hello{
+    font-size: 75px;
+  }
+
+  #index-photo img {
+    width: 370px;
+    margin-top: -170px;
+
+  }
+
+  #index-photo::before {
+    width: 280px; 
+    height: 280px;
+    top: 175px;
+    right: 40px;
+  }
+}
+@media (max-width: 380px){
+  #hello{
+    font-size: 65px;
+  }
+
+  #index-photo img {
+    width: 350px;
+    margin-top: -170px;
+
+  }
+
+  #index-photo::before {
+    width: 260px; 
+    height: 260px;
+    top: 150px;
+    right: 30px;
+  }
+}
+
