@@ -116,7 +116,7 @@ h1 {
   background-color: var(--nav-color);
 }
 #side-nav li {
-  margin-bottom: 5px;
+  margin-bottom: 20px;
 }
 section {
   margin: 0px 5px 35px 5px;
